@@ -1,0 +1,989 @@
+VERSION 5.00
+Begin VB.PropertyPage ppgGeneral 
+   Caption         =   "General"
+   ClientHeight    =   6012
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   6372
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   6012
+   ScaleWidth      =   6372
+   Begin VB.Frame fraMenuBar 
+      Caption         =   "MenuButton"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   7.8
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000D&
+      Height          =   3852
+      Index           =   2
+      Left            =   120
+      TabIndex        =   17
+      Top             =   2040
+      Width           =   3132
+      Begin VB.CheckBox chkButtonHideInSingleMenu 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Hide Button in sin&gle menu:"
+         Height          =   192
+         Left            =   120
+         TabIndex        =   53
+         Top             =   3480
+         Width           =   2892
+      End
+      Begin VB.PictureBox picColor 
+         Height          =   255
+         Index           =   1
+         Left            =   2160
+         ScaleHeight     =   204
+         ScaleWidth      =   804
+         TabIndex        =   23
+         TabStop         =   0   'False
+         Top             =   600
+         Width           =   852
+      End
+      Begin VB.CommandButton cmdColor 
+         Caption         =   "..."
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.6
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Index           =   1
+         Left            =   1680
+         TabIndex        =   22
+         Top             =   600
+         Width           =   372
+      End
+      Begin VB.PictureBox picColor 
+         Height          =   255
+         Index           =   0
+         Left            =   2160
+         ScaleHeight     =   204
+         ScaleWidth      =   804
+         TabIndex        =   20
+         TabStop         =   0   'False
+         Top             =   240
+         Width           =   852
+      End
+      Begin VB.CommandButton cmdColor 
+         Caption         =   "..."
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.6
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Index           =   0
+         Left            =   1680
+         TabIndex        =   19
+         Top             =   240
+         Width           =   372
+      End
+      Begin VB.CheckBox chkMenuCaptionBold 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Caption Bol&d:"
+         Height          =   192
+         Left            =   120
+         TabIndex        =   35
+         Top             =   3120
+         Value           =   1  'Checked
+         Width           =   2892
+      End
+      Begin VB.ComboBox cmbIconAlignment 
+         Height          =   288
+         ItemData        =   "ppgGeneral.pgx":0000
+         Left            =   1680
+         List            =   "ppgGeneral.pgx":000A
+         Style           =   2  'Dropdown List
+         TabIndex        =   32
+         Top             =   2280
+         Width           =   1332
+      End
+      Begin VB.ComboBox cmbCaptionAlignment 
+         Height          =   288
+         ItemData        =   "ppgGeneral.pgx":0033
+         Left            =   1680
+         List            =   "ppgGeneral.pgx":0040
+         Style           =   2  'Dropdown List
+         TabIndex        =   34
+         Top             =   2640
+         Width           =   1332
+      End
+      Begin VB.ComboBox cmbHeight 
+         Height          =   288
+         ItemData        =   "ppgGeneral.pgx":0079
+         Left            =   1680
+         List            =   "ppgGeneral.pgx":0083
+         Style           =   2  'Dropdown List
+         TabIndex        =   30
+         Top             =   1800
+         Width           =   1332
+      End
+      Begin VB.ComboBox cmbGradientType 
+         Height          =   288
+         ItemData        =   "ppgGeneral.pgx":009A
+         Left            =   1680
+         List            =   "ppgGeneral.pgx":00AD
+         Style           =   2  'Dropdown List
+         TabIndex        =   28
+         Top             =   1320
+         Width           =   1332
+      End
+      Begin VB.PictureBox picColor 
+         Height          =   255
+         Index           =   2
+         Left            =   2160
+         ScaleHeight     =   204
+         ScaleWidth      =   804
+         TabIndex        =   26
+         TabStop         =   0   'False
+         Top             =   960
+         Width           =   852
+      End
+      Begin VB.CommandButton cmdColor 
+         Caption         =   "..."
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.6
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Index           =   2
+         Left            =   1680
+         TabIndex        =   25
+         Top             =   960
+         Width           =   372
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "BackColo&r:"
+         Height          =   192
+         Index           =   10
+         Left            =   120
+         TabIndex        =   21
+         Top             =   270
+         Width           =   792
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "&ForeColor:"
+         Height          =   192
+         Index           =   9
+         Left            =   120
+         TabIndex        =   18
+         Top             =   630
+         Width           =   756
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Icon Align&ment:"
+         Height          =   192
+         Index           =   8
+         Left            =   120
+         TabIndex        =   31
+         Top             =   2316
+         Width           =   1080
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Capti&on Alignment:"
+         Height          =   192
+         Index           =   7
+         Left            =   120
+         TabIndex        =   33
+         Top             =   2676
+         Width           =   1332
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "&Height:"
+         Height          =   192
+         Index           =   6
+         Left            =   120
+         TabIndex        =   29
+         Top             =   1836
+         Width           =   504
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Gradient&Type:"
+         Height          =   192
+         Index           =   5
+         Left            =   120
+         TabIndex        =   27
+         Top             =   1356
+         Width           =   1032
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "&GradientColor:"
+         Height          =   192
+         Index           =   4
+         Left            =   120
+         TabIndex        =   24
+         Top             =   996
+         Width           =   1032
+      End
+   End
+   Begin VB.Frame fraMenuBar 
+      Caption         =   "Effects"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   7.8
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000D&
+      Height          =   1812
+      Index           =   4
+      Left            =   3840
+      TabIndex        =   13
+      Top             =   120
+      Width           =   2412
+      Begin VB.CheckBox chkAnimation 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Scroll an&imations:"
+         Height          =   252
+         Left            =   120
+         TabIndex        =   14
+         Top             =   240
+         Width           =   2172
+      End
+      Begin VB.CheckBox chkSoundItemScroll 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Sound by &scroll Itmes:"
+         Height          =   252
+         Left            =   120
+         TabIndex        =   16
+         Top             =   1440
+         Width           =   2172
+      End
+      Begin VB.CheckBox chkSoundMenuOpen 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Sound &by open menus:"
+         Height          =   252
+         Left            =   120
+         TabIndex        =   15
+         Top             =   840
+         Width           =   2172
+      End
+   End
+   Begin VB.Frame fraMenuBar 
+      Caption         =   "MenuItem"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   7.8
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000D&
+      Height          =   3852
+      Index           =   3
+      Left            =   3360
+      TabIndex        =   36
+      Top             =   2040
+      Width           =   2892
+      Begin VB.CheckBox chkOnlyFullItemsHit 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Onl&y full items hit:"
+         Height          =   252
+         Left            =   120
+         TabIndex        =   46
+         Top             =   1800
+         Width           =   2652
+      End
+      Begin VB.CheckBox chkOnlyFullItemsShow 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Only full items sho&w:"
+         Height          =   252
+         Left            =   120
+         TabIndex        =   47
+         Top             =   2100
+         Width           =   2652
+      End
+      Begin VB.ComboBox cmbItemAlignment 
+         Height          =   288
+         ItemData        =   "ppgGeneral.pgx":0103
+         Left            =   1440
+         List            =   "ppgGeneral.pgx":0110
+         Style           =   2  'Dropdown List
+         TabIndex        =   44
+         Top             =   1080
+         Width           =   1332
+      End
+      Begin VB.OptionButton optIconSize 
+         Alignment       =   1  'Right Justify
+         Caption         =   "1&6 x 16"
+         Height          =   252
+         Index           =   0
+         Left            =   120
+         TabIndex        =   49
+         Top             =   2880
+         Width           =   1092
+      End
+      Begin VB.OptionButton optIconSize 
+         Alignment       =   1  'Right Justify
+         Caption         =   "3&2 x 32"
+         Height          =   252
+         Index           =   1
+         Left            =   120
+         TabIndex        =   50
+         Top             =   3360
+         Width           =   1092
+      End
+      Begin VB.OptionButton optIconSize 
+         Alignment       =   1  'Right Justify
+         Caption         =   "4&8 x 48"
+         Height          =   252
+         Index           =   2
+         Left            =   1680
+         TabIndex        =   51
+         Top             =   2880
+         Width           =   1092
+      End
+      Begin VB.OptionButton optIconSize 
+         Alignment       =   1  'Right Justify
+         Caption         =   "6&4 x 64"
+         Height          =   252
+         Index           =   3
+         Left            =   1680
+         TabIndex        =   52
+         Top             =   3360
+         Width           =   1092
+      End
+      Begin VB.PictureBox picColor 
+         Height          =   255
+         Index           =   4
+         Left            =   1920
+         ScaleHeight     =   204
+         ScaleWidth      =   804
+         TabIndex        =   42
+         TabStop         =   0   'False
+         Top             =   600
+         Width           =   852
+      End
+      Begin VB.CommandButton cmdColor 
+         Caption         =   "..."
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.6
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Index           =   4
+         Left            =   1440
+         TabIndex        =   41
+         Top             =   600
+         Width           =   372
+      End
+      Begin VB.PictureBox picColor 
+         Height          =   255
+         Index           =   3
+         Left            =   1920
+         ScaleHeight     =   204
+         ScaleWidth      =   804
+         TabIndex        =   39
+         TabStop         =   0   'False
+         Top             =   240
+         Width           =   852
+      End
+      Begin VB.CommandButton cmdColor 
+         Caption         =   "..."
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.6
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Index           =   3
+         Left            =   1440
+         TabIndex        =   38
+         Top             =   240
+         Width           =   372
+      End
+      Begin VB.CheckBox chkItemCaptionBold 
+         Alignment       =   1  'Right Justify
+         Caption         =   "C&aption Bold:"
+         Height          =   192
+         Left            =   120
+         TabIndex        =   45
+         Top             =   1500
+         Value           =   1  'Checked
+         Width           =   2652
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "A&lignment:"
+         Height          =   192
+         Index           =   13
+         Left            =   120
+         TabIndex        =   43
+         Top             =   1116
+         Width           =   744
+      End
+      Begin VB.Label lblIconSize 
+         AutoSize        =   -1  'True
+         Caption         =   "IconSize"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H8000000D&
+         Height          =   192
+         Left            =   120
+         TabIndex        =   48
+         Top             =   2508
+         Width           =   720
+      End
+      Begin VB.Line linIconSize 
+         BorderColor     =   &H80000014&
+         Index           =   1
+         X1              =   2880
+         X2              =   0
+         Y1              =   2616
+         Y2              =   2616
+      End
+      Begin VB.Line linIconSize 
+         BorderColor     =   &H80000010&
+         Index           =   0
+         X1              =   2868
+         X2              =   0
+         Y1              =   2604
+         Y2              =   2604
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Fore&Color:"
+         Height          =   192
+         Index           =   12
+         Left            =   120
+         TabIndex        =   40
+         Top             =   636
+         Width           =   756
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Bac&kColor:"
+         Height          =   192
+         Index           =   11
+         Left            =   120
+         TabIndex        =   37
+         Top             =   276
+         Width           =   792
+      End
+   End
+   Begin VB.Frame fraMenuBar 
+      Caption         =   "Appearance of MenuBar"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   7.8
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000D&
+      Height          =   1812
+      Index           =   1
+      Left            =   120
+      TabIndex        =   0
+      Top             =   120
+      Width           =   3612
+      Begin VB.ComboBox cmbBorderStyle 
+         Height          =   288
+         ItemData        =   "ppgGeneral.pgx":0149
+         Left            =   1800
+         List            =   "ppgGeneral.pgx":0156
+         Style           =   2  'Dropdown List
+         TabIndex        =   4
+         Top             =   600
+         Width           =   1692
+      End
+      Begin VB.ComboBox cmbAppearance 
+         Height          =   288
+         ItemData        =   "ppgGeneral.pgx":0181
+         Left            =   2400
+         List            =   "ppgGeneral.pgx":018B
+         Style           =   2  'Dropdown List
+         TabIndex        =   2
+         Top             =   240
+         Width           =   1092
+      End
+      Begin VB.CommandButton cmdStartMenusDown 
+         Caption         =   "<"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   2400
+         TabIndex        =   10
+         Top             =   1416
+         Width           =   255
+      End
+      Begin VB.CommandButton cmdMenusDown 
+         Caption         =   "<"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   2400
+         TabIndex        =   6
+         Top             =   1056
+         Width           =   255
+      End
+      Begin VB.CommandButton cmdStartMenusUp 
+         Caption         =   ">"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   3216
+         TabIndex        =   12
+         Top             =   1416
+         Width           =   255
+      End
+      Begin VB.CommandButton cmdMenusUp 
+         Caption         =   ">"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   3216
+         TabIndex        =   8
+         Top             =   1056
+         Width           =   255
+      End
+      Begin VB.TextBox txtStartupMenu 
+         Alignment       =   2  'Center
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   2640
+         Locked          =   -1  'True
+         MaxLength       =   2
+         TabIndex        =   11
+         TabStop         =   0   'False
+         Top             =   1416
+         Width           =   576
+      End
+      Begin VB.TextBox txtMaxMenus 
+         Alignment       =   2  'Center
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   2640
+         Locked          =   -1  'True
+         MaxLength       =   2
+         TabIndex        =   7
+         TabStop         =   0   'False
+         Top             =   1056
+         Width           =   576
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Bord&erStyle:"
+         Height          =   192
+         Index           =   1
+         Left            =   120
+         TabIndex        =   3
+         Top             =   640
+         Width           =   888
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Appeara&nce:"
+         Height          =   192
+         Index           =   0
+         Left            =   120
+         TabIndex        =   1
+         Top             =   280
+         Width           =   936
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Start&up Menu:"
+         Height          =   192
+         Index           =   3
+         Left            =   120
+         TabIndex        =   9
+         Top             =   1440
+         Width           =   972
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Ma&ximum Menus:"
+         Height          =   192
+         Index           =   2
+         Left            =   120
+         TabIndex        =   5
+         Top             =   1080
+         Width           =   1236
+      End
+   End
+End
+Attribute VB_Name = "ppgGeneral"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+
+' Private Type
+Private Type ChooseColor
+   lStructSize       As Long
+   hwndOwner         As Long
+   hInstance         As Long
+   rgbResult         As Long
+   lpCustColors      As String
+   flags             As Long
+   lCustData         As Long
+   lpfnHook          As Long
+   lpTemplateName    As String
+End Type
+
+' Private Variables
+Private Wait         As Boolean
+Private ItemIconSize As Integer
+Private MaxMenus     As Integer
+Private StartMenu    As Integer
+Private RGBColor     As Long
+
+' Private API
+Private Declare Function ChooseColorAPI Lib "ComDlg32" Alias "ChooseColorA" (pChoosecolor As ChooseColor) As Long
+
+Private Function GetColor(ByVal DefaultColor As Long) As Long
+
+Const CC_ANYCOLOR        As Long = &H100
+Const CC_FULLOPEN        As Long = &H2
+Const CC_PREVENTFULLOPEN As Long = &H4
+Const CC_RGBINIT         As Long = &H1
+Const CC_SHOWHELP        As Long = &H8
+
+Dim cclColor             As ChooseColor
+Dim intCount             As Integer
+Dim lngCustomColors(15)  As Long
+
+   For intCount = 0 To 15
+       lngCustomColors(intCount) = QBColor(intCount)
+   Next 'intCount
+   
+   With cclColor
+      .lStructSize = Len(cclColor)
+      .hwndOwner = hWnd
+      .hInstance = App.hInstance
+      .rgbResult = DefaultColor
+      .lpCustColors = VarPtr(lngCustomColors(0))
+      .flags = CC_ANYCOLOR Or CC_RGBINIT Or CC_FULLOPEN Or CC_PREVENTFULLOPEN Or CC_SHOWHELP
+      
+      If ChooseColorAPI(cclColor) Then
+         GetColor = .rgbResult
+         
+      Else
+         GetColor = DefaultColor
+      End If
+   End With
+
+End Function
+
+Private Sub CheckMaxMenusForButton()
+
+   chkButtonHideInSingleMenu.Enabled = (MaxMenus = 1)
+   
+   If MaxMenus > 1 Then chkButtonHideInSingleMenu.Value = vbUnchecked
+
+End Sub
+
+Private Sub chkAnimation_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub chkButtonHideInSingleMenu_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub chkItemCaptionBold_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub chkMenuCaptionBold_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub chkOnlyFullItemsHit_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub chkOnlyFullItemsShow_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub chkSoundMenuOpen_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub chkSoundItemScroll_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub cmbAppearance_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub cmbBorderStyle_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub cmbCaptionAlignment_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub cmbGradientType_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub cmbHeight_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub cmbIconAlignment_Change()
+
+   Changed = True
+
+End Sub
+
+Private Sub cmbItemAlignment_Click()
+
+   Changed = True
+
+End Sub
+
+Private Sub cmdColor_Click(Index As Integer)
+
+   picColor.Item(Index).BackColor = GetColor(picColor.Item(Index).BackColor)
+   Changed = True
+
+End Sub
+
+Private Sub cmdMenusDown_Click()
+
+   If MaxMenus = 1 Then Exit Sub
+   
+   MaxMenus = MaxMenus - 1
+   txtMaxMenus.Text = MaxMenus
+   Changed = True
+   
+   Call CheckMaxMenusForButton
+
+End Sub
+
+Private Sub cmdMenusUp_Click()
+
+   If MaxMenus = MENU_MAX_MENUS Then Exit Sub
+   
+   MaxMenus = MaxMenus + 1
+   txtMaxMenus.Text = MaxMenus
+   Changed = True
+   
+   Call CheckMaxMenusForButton
+
+End Sub
+
+Private Sub cmdStartMenusDown_Click()
+
+   If StartMenu <= 1 Then Exit Sub
+   
+   StartMenu = StartMenu - 1
+   txtStartupMenu.Text = StartMenu
+   Changed = True
+
+End Sub
+
+Private Sub cmdStartMenusUp_Click()
+
+   If StartMenu >= MaxMenus Then Exit Sub
+   
+   StartMenu = StartMenu + 1
+   txtStartupMenu.Text = StartMenu
+   Changed = True
+
+End Sub
+
+Private Sub OptIconSize_Click(Index As Integer)
+
+   ItemIconSize = Index
+   
+   If Wait Then Changed = True
+
+End Sub
+
+Private Sub PropertyPage_ApplyChanges()
+
+   If StartMenu > MaxMenus Then StartMenu = 1
+   
+   With SelectedControls(0)
+      .BorderStyle = cmbBorderStyle.ListIndex
+      .Appearance = cmbAppearance.ListIndex
+      .MaxMenus = MaxMenus
+      .StartupMenu = StartMenu
+      .Animation = CBool(chkAnimation.Value)
+      .SoundMenuOpen = CBool(chkSoundMenuOpen.Value)
+      .SoundItemScroll = CBool(chkSoundItemScroll.Value)
+      .ButtonBackColor = picColor.Item(0).BackColor
+      .ButtonForeColor = picColor.Item(1).BackColor
+      .ButtonGradientColor = picColor.Item(2).BackColor
+      .ButtonGradientType = cmbGradientType.ListIndex
+      .ButtonHeight = cmbHeight.ListIndex
+      .ButtonIconAlignment = cmbIconAlignment.ListIndex
+      .ButtonCaptionAlignment = cmbCaptionAlignment.ListIndex
+      .FontBoldButtonCaption = CBool(chkMenuCaptionBold.Value)
+      .ButtonHideInSingleMenu = CBool(chkButtonHideInSingleMenu.Value)
+      .ItemBackColor = picColor.Item(3).BackColor
+      .ItemForeColor = picColor.Item(4).BackColor
+      .ItemAlignment = cmbItemAlignment.ListIndex
+      .OnlyFullItemsHit = CBool(chkOnlyFullItemsHit.Value)
+      .OnlyFullItemsShow = CBool(chkOnlyFullItemsShow.Value)
+      .FontBoldItemCaption = CBool(chkItemCaptionBold.Value)
+      .ItemIconSize = ItemIconSize
+   End With
+
+End Sub
+
+Private Sub PropertyPage_SelectionChanged()
+
+   With SelectedControls(0)
+      Wait = False
+      cmbAppearance.ListIndex = .Appearance
+      cmbBorderStyle.ListIndex = .BorderStyle
+      MaxMenus = .MaxMenus
+      txtMaxMenus.Text = MaxMenus
+      StartMenu = .StartupMenu
+      txtStartupMenu.Text = StartMenu
+      chkAnimation.Value = Abs(.Animation)
+      chkSoundMenuOpen.Value = Abs(.SoundMenuOpen)
+      chkSoundItemScroll.Value = Abs(.SoundItemScroll)
+      picColor.Item(0).BackColor = .ButtonBackColor
+      picColor.Item(1).BackColor = .ButtonForeColor
+      picColor.Item(2).BackColor = .ButtonGradientColor
+      cmbGradientType.ListIndex = .ButtonGradientType
+      cmbHeight.ListIndex = .ButtonHeight
+      cmbIconAlignment.ListIndex = .ButtonIconAlignment
+      cmbCaptionAlignment.ListIndex = .ButtonCaptionAlignment
+      chkMenuCaptionBold.Value = Abs(.FontBoldButtonCaption)
+      chkButtonHideInSingleMenu.Value = Abs(.ButtonHideInSingleMenu)
+      picColor.Item(3).BackColor = .ItemBackColor
+      picColor.Item(4).BackColor = .ItemForeColor
+      cmbItemAlignment.ListIndex = .ItemAlignment
+      chkOnlyFullItemsHit.Value = Abs(.OnlyFullItemsHit)
+      chkOnlyFullItemsShow.Value = Abs(.OnlyFullItemsShow)
+      chkItemCaptionBold.Value = Abs(.FontBoldItemCaption)
+      ItemIconSize = .ItemIconSize
+      optIconSize(ItemIconSize).Value = True
+      Wait = True
+   End With
+   
+   Call CheckMaxMenusForButton
+
+End Sub
+

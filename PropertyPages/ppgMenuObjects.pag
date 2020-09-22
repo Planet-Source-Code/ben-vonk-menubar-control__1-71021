@@ -1,0 +1,667 @@
+VERSION 5.00
+Begin VB.PropertyPage ppgMenuObjects 
+   Caption         =   "MenuObjects"
+   ClientHeight    =   6012
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   6372
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   6012
+   ScaleWidth      =   6372
+   Begin VB.Frame fraMenuBar 
+      Caption         =   "Item Settings"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   7.8
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000D&
+      Height          =   3372
+      Index           =   1
+      Left            =   120
+      TabIndex        =   13
+      Top             =   2520
+      Width           =   6132
+      Begin VB.CommandButton cmdMaxItemsUp 
+         Caption         =   ">"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   5736
+         TabIndex        =   17
+         Top             =   240
+         Width           =   255
+      End
+      Begin VB.TextBox txtMaxMenuItems 
+         Alignment       =   2  'Center
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   5160
+         Locked          =   -1  'True
+         MaxLength       =   2
+         TabIndex        =   16
+         TabStop         =   0   'False
+         Top             =   240
+         Width           =   576
+      End
+      Begin VB.CommandButton cmdMaxItemsDown 
+         Caption         =   "<"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   4920
+         TabIndex        =   15
+         Top             =   240
+         Width           =   255
+      End
+      Begin VB.TextBox txtItemToolTipText 
+         Height          =   288
+         Left            =   3000
+         MaxLength       =   255
+         TabIndex        =   31
+         Top             =   2520
+         Width           =   2988
+      End
+      Begin VB.TextBox txtItemTag 
+         Height          =   288
+         Left            =   3000
+         MaxLength       =   255
+         TabIndex        =   29
+         Top             =   2160
+         Width           =   2988
+      End
+      Begin VB.TextBox txtItemKey 
+         Height          =   288
+         Left            =   3000
+         MaxLength       =   255
+         TabIndex        =   27
+         Top             =   1800
+         Width           =   2988
+      End
+      Begin VB.TextBox txtItemCaption 
+         Height          =   288
+         Left            =   3000
+         MaxLength       =   255
+         TabIndex        =   25
+         Top             =   1440
+         Width           =   2988
+      End
+      Begin VB.CommandButton cmdCurrentItemDown 
+         Caption         =   "<"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   4920
+         TabIndex        =   19
+         Top             =   600
+         Width           =   255
+      End
+      Begin VB.CommandButton cmdCurrentItemUp 
+         Caption         =   ">"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   5736
+         TabIndex        =   21
+         Top             =   600
+         Width           =   255
+      End
+      Begin VB.TextBox txtCurrentItem 
+         Alignment       =   2  'Center
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   5160
+         Locked          =   -1  'True
+         MaxLength       =   2
+         TabIndex        =   20
+         TabStop         =   0   'False
+         Top             =   600
+         Width           =   576
+      End
+      Begin VB.ComboBox cmbItemType 
+         Height          =   288
+         ItemData        =   "ppgMenuObjects.pgx":0000
+         Left            =   4200
+         List            =   "ppgMenuObjects.pgx":0013
+         Style           =   2  'Dropdown List
+         TabIndex        =   23
+         Top             =   1080
+         Width           =   1812
+      End
+      Begin VB.Image imgItemIcon 
+         BorderStyle     =   1  'Fixed Single
+         Height          =   492
+         Left            =   1680
+         Stretch         =   -1  'True
+         Top             =   2760
+         Width           =   492
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Maximum MenuItem&s:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   192
+         Index           =   5
+         Left            =   120
+         TabIndex        =   14
+         Top             =   300
+         Width           =   1764
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "T&oolTipText:"
+         Height          =   192
+         Index           =   11
+         Left            =   120
+         TabIndex        =   30
+         Top             =   2500
+         Width           =   924
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Icon:"
+         Height          =   192
+         Index           =   12
+         Left            =   120
+         TabIndex        =   32
+         Top             =   2900
+         Width           =   336
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "&Tag:"
+         Height          =   192
+         Index           =   10
+         Left            =   120
+         TabIndex        =   28
+         Top             =   2140
+         Width           =   336
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Captio&n:"
+         Height          =   192
+         Index           =   8
+         Left            =   120
+         TabIndex        =   24
+         Top             =   1460
+         Width           =   588
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "&Key:"
+         Height          =   192
+         Index           =   9
+         Left            =   120
+         TabIndex        =   26
+         Top             =   1820
+         Width           =   312
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Cu&rrent Item:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   192
+         Index           =   6
+         Left            =   120
+         TabIndex        =   18
+         Top             =   660
+         Width           =   1044
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Typ&e:"
+         Height          =   192
+         Index           =   7
+         Left            =   120
+         TabIndex        =   22
+         Top             =   1140
+         Width           =   420
+      End
+   End
+   Begin VB.Frame fraMenuBar 
+      Caption         =   "Menu Settings"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   7.8
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000D&
+      Height          =   2292
+      Index           =   0
+      Left            =   120
+      TabIndex        =   0
+      Top             =   120
+      Width           =   6132
+      Begin VB.TextBox txtButtonToolTipText 
+         Height          =   288
+         Left            =   3000
+         MaxLength       =   255
+         TabIndex        =   10
+         Top             =   1440
+         Width           =   2988
+      End
+      Begin VB.TextBox txtButtonTag 
+         Height          =   288
+         Left            =   3000
+         MaxLength       =   255
+         TabIndex        =   8
+         Top             =   1080
+         Width           =   2988
+      End
+      Begin VB.CheckBox chkMenuPassword 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Protect menu open &with password:"
+         Height          =   252
+         Left            =   3000
+         TabIndex        =   12
+         Top             =   1800
+         Width           =   3012
+      End
+      Begin VB.TextBox txtCurrentMenu 
+         Alignment       =   2  'Center
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   5160
+         Locked          =   -1  'True
+         MaxLength       =   2
+         TabIndex        =   3
+         TabStop         =   0   'False
+         Top             =   240
+         Width           =   576
+      End
+      Begin VB.CommandButton cmdCurrentMenuUp 
+         Caption         =   ">"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   5736
+         TabIndex        =   4
+         Top             =   240
+         Width           =   255
+      End
+      Begin VB.CommandButton cmdCurrentMenuDown 
+         Caption         =   "<"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   288
+         Left            =   4920
+         TabIndex        =   2
+         Top             =   240
+         Width           =   255
+      End
+      Begin VB.TextBox txtButtonCaption 
+         Height          =   288
+         Left            =   3000
+         MaxLength       =   255
+         TabIndex        =   6
+         Top             =   720
+         Width           =   2988
+      End
+      Begin VB.Image imgButtonIcon 
+         BorderStyle     =   1  'Fixed Single
+         Height          =   492
+         Left            =   1680
+         Stretch         =   -1  'True
+         Top             =   1680
+         Width           =   492
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "ToolTipTe&xt:"
+         Height          =   192
+         Index           =   3
+         Left            =   120
+         TabIndex        =   9
+         Top             =   1460
+         Width           =   924
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Icon:"
+         Height          =   192
+         Index           =   4
+         Left            =   120
+         TabIndex        =   11
+         Top             =   1820
+         Width           =   336
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "T&ag:"
+         Height          =   192
+         Index           =   2
+         Left            =   120
+         TabIndex        =   7
+         Top             =   1100
+         Width           =   336
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "Current &Menu:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   7.8
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   192
+         Index           =   0
+         Left            =   120
+         TabIndex        =   1
+         Top             =   300
+         Width           =   1140
+      End
+      Begin VB.Label lblInfo 
+         AutoSize        =   -1  'True
+         Caption         =   "&Caption:"
+         Height          =   192
+         Index           =   1
+         Left            =   120
+         TabIndex        =   5
+         Top             =   740
+         Width           =   588
+      End
+   End
+End
+Attribute VB_Name = "ppgMenuObjects"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+
+' Private Variables
+Private Wait        As Boolean
+Private CurrentItem As Integer
+Private CurrentMenu As Integer
+Private MaxItems    As Integer
+
+Private Sub SaveItemSettings(ByVal Value As Integer)
+
+   Call PropertyPage_ApplyChanges
+   
+   CurrentItem = CurrentItem + Value
+   txtCurrentItem.Text = CurrentItem
+   SelectedControls(0).CurrentItem = txtCurrentItem.Text
+   
+   If Wait Then Changed = True
+
+End Sub
+
+Private Sub SaveMenuSettings(ByVal Value As Integer)
+
+   Call PropertyPage_ApplyChanges
+   
+   CurrentMenu = CurrentMenu + Value
+   txtCurrentMenu.Text = CurrentMenu
+   CurrentItem = 1
+   txtCurrentItem.Text = CurrentItem
+   SelectedControls(0).CurrentMenu = txtCurrentMenu.Text
+   SelectedControls(0).CurrentItem = txtCurrentItem.Text
+   
+   If Wait Then Changed = True
+
+End Sub
+
+Private Sub chkMenuPassword_Click()
+
+   If Wait Then Changed = True
+
+End Sub
+
+Private Sub cmbItemType_Click()
+
+   If Wait Then Changed = True
+
+End Sub
+
+Private Sub cmdCurrentItemDown_Click()
+
+   If CurrentItem <= 1 Then Exit Sub
+   
+   Call SaveItemSettings(-1)
+
+End Sub
+
+Private Sub cmdCurrentItemUp_Click()
+
+   If CurrentItem >= MaxItems Then Exit Sub
+   
+   Call SaveItemSettings(1)
+
+End Sub
+
+Private Sub cmdCurrentMenuDown_Click()
+
+   If CurrentMenu <= 1 Then Exit Sub
+   
+   Call SaveMenuSettings(-1)
+
+End Sub
+
+Private Sub cmdCurrentMenuUp_Click()
+
+   If CurrentMenu >= SelectedControls(0).MaxMenus Then Exit Sub
+ 
+   Call SaveMenuSettings(1)
+
+End Sub
+
+Private Sub cmdMaxItemsDown_Click()
+
+   If MaxItems < 2 Then Exit Sub
+   
+   MaxItems = MaxItems - 1
+   txtMaxMenuItems.Text = MaxItems
+   Changed = True
+
+End Sub
+
+Private Sub cmdMaxItemsUp_Click()
+
+   If MaxItems = MENU_MAX_ITEMS Then Exit Sub
+   
+   MaxItems = MaxItems + 1
+   txtMaxMenuItems.Text = MaxItems
+   Changed = True
+
+End Sub
+
+Private Sub PropertyPage_ApplyChanges()
+
+   With SelectedControls.Item(0)
+      .CurrentMenu = CurrentMenu
+      .ButtonCaption = txtButtonCaption.Text
+      .ButtonTag = txtButtonTag.Text
+      .ButtonToolTipText = txtButtonToolTipText.Text
+      Set .ButtonIcon = imgButtonIcon.Picture
+      .MenuPassword = CBool(chkMenuPassword.Value)
+      .MaxItems = MaxItems
+      .CurrentItem = txtCurrentItem.Text
+      .ItemType = cmbItemType.ListIndex
+      .ItemCaption = txtItemCaption.Text
+      .ItemKey = txtItemKey.Text
+      .ItemTag = txtItemTag.Text
+      .ItemToolTipText = txtItemToolTipText.Text
+      Set .ItemIcon = imgItemIcon.Picture
+      .Refresh
+   End With
+
+End Sub
+
+Private Sub PropertyPage_SelectionChanged()
+
+   With SelectedControls.Item(0)
+      Wait = False
+      CurrentMenu = .CurrentMenu
+      txtCurrentMenu.Text = CurrentMenu
+      txtButtonCaption.Text = .ButtonCaption
+      txtButtonTag.Text = .ButtonTag
+      txtButtonToolTipText.Text = .ButtonToolTipText
+      imgButtonIcon.Picture = .ButtonIcon
+      chkMenuPassword.Enabled = (CurrentMenu <> .StartupMenu)
+      
+      If CurrentMenu = .StartupMenu Then
+         chkMenuPassword.Value = vbUnchecked
+         
+      Else
+         chkMenuPassword.Value = Abs(.MenuPassword)
+      End If
+      
+      MaxItems = .MaxItems
+      txtMaxMenuItems.Text = MaxItems
+      CurrentItem = .CurrentItem
+      txtCurrentItem.Text = CurrentItem
+      cmbItemType.ListIndex = .ItemType
+      txtItemCaption.Text = .ItemCaption
+      imgItemIcon.Picture = .ItemIcon
+      txtItemKey.Text = .ItemKey
+      txtItemTag.Text = .ItemTag
+      txtItemToolTipText.Text = .ItemToolTipText
+      Wait = True
+      
+      If .MenuPassword And (CurrentMenu = .StartupMenu) Then
+         Changed = True
+         
+         Call PropertyPage_ApplyChanges
+      End If
+   End With
+
+End Sub
+
+Private Sub txtButtonCaption_Change()
+
+   If Wait Then Changed = True
+
+End Sub
+
+Private Sub txtButtonTag_Change()
+
+   If Wait Then Changed = True
+
+End Sub
+
+Private Sub txtButtonToolTipText_Change()
+
+   If Wait Then Changed = True
+
+End Sub
+
+Private Sub txtItemCaption_Change()
+
+   If Wait Then Changed = True
+
+End Sub
+
+Private Sub txtItemKey_Change()
+
+   If Wait Then Changed = True
+
+End Sub
+
+Private Sub txtItemTag_Change()
+
+   If Wait Then Changed = True
+
+End Sub
+
+Private Sub txtItemToolTipText_Change()
+
+   If Wait Then Changed = True
+
+End Sub
+
