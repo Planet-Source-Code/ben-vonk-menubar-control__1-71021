@@ -1,0 +1,8 @@
+Robert L. Kubelka   Author of the original version
+
+Ian Webling         Attents users to the original Author
+
+Yves Lessard        Makes a second version
+
+Ben Vonk            And I have make this third version with thanks to
+	            Robert L. Kubelka and Ian Webling.
